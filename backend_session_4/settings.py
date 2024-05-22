@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-gjn8=onxp62se7w+a7ivx^wofjjxmkw3!1(&q1e@uhvwo^*t!g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'backend_session_4.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'poll_db',
+        'USER': 'heemin',
+        'PASSWORD': 'gmlals02**',
+        'HOST': 'likelion-session-db.cfasuoy4e441.ap-northeast-2.rds.amazonaws.com',
+        'PORT':'3306'
     }
 }
 
